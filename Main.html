@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="mainstyle.css">
+<head>
+	<meta charset="UTF-8">
+	<title>Main Page</title>
+</head>
+<body>
+	<h1>Sky IA</h1>
+	<div class="zone">Posez moi une question !</div>
+	<label for="name" class="question">Question:</label>
+	<input type="text" class="center" id="name" name="name" required minlength="1" maxlength="150" size="100">
+	<button type="button" onclick="getInputValue();">Poser</button>
+
+	<script>
+        function getInputValue(){
+            var inputVal = document.getElementById("name").value;
+            const questions = ['Qui est le roux', 'Qui est le plus bg', 'Meilleurs serveur', 'Ma Classe ?']
+            const answers = ['Ce roux de theo danglar', 'Mon createur bien sur', 'Sivanium, SkySurvie', 'Terminal STID2']
+
+            for(let i=0;i!=questions.length;i++)
+            {
+            	if(inputVal.includes(questions[i]))
+            	{
+            		alert(answers[i]);
+            		break;
+            	}
+            }
+        }
+    </script>
+
+    <h5>Made by Skyreth™</h5>
+</body>
+</html>
